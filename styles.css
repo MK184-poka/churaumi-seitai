@@ -368,6 +368,7 @@ h1 {
 .story-photo,
 .reason-photo,
 .contact-section > img,
+.access-photo,
 .map-placeholder {
   overflow: hidden;
   border-radius: 8px;
@@ -650,21 +651,49 @@ h1 {
   background: #fff;
 }
 
+.access-media {
+  display: grid;
+  gap: 14px;
+}
+
+.access-photo {
+  margin: 0;
+  background: #fff;
+}
+
+.access-photo img {
+  height: 320px;
+  object-fit: cover;
+}
+
+.access-photo figcaption {
+  padding: 12px 14px;
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 800;
+}
+
 .map-placeholder {
-  min-height: 380px;
+  min-height: 320px;
   background: #d8e5e2;
 }
 
-.map-placeholder img {
+.map-placeholder iframe {
+  display: block;
+  width: 100%;
   height: 100%;
-  min-height: 380px;
-  object-fit: cover;
+  min-height: 320px;
+  border: 0;
 }
 
 .access-copy ul {
   margin: 22px 0 0;
   padding-left: 18px;
   color: var(--muted);
+}
+
+.map-link {
+  margin-top: 22px;
 }
 
 .sns-section {
@@ -850,8 +879,8 @@ h1 {
 
 @media (max-width: 620px) {
   .site-header {
-    grid-template-columns: 1fr;
-    gap: 8px;
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 10px;
     padding: 12px 14px;
     background: linear-gradient(180deg, rgba(9, 31, 29, 0.88), rgba(9, 31, 29, 0.38));
   }
@@ -861,7 +890,7 @@ h1 {
   }
 
   .brand strong {
-    font-size: 14px;
+    font-size: 13px;
   }
 
   .brand small {
@@ -870,29 +899,28 @@ h1 {
   }
 
   .header-cta {
-    min-height: 34px;
-    padding: 8px 10px;
-    font-size: 12px;
+    min-height: 30px;
+    padding: 7px 9px;
+    font-size: 11px;
     white-space: nowrap;
     min-width: 0;
   }
 
   .header-actions {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    display: flex;
     width: auto;
-    max-width: calc(100vw - 48px);
-    justify-self: center;
-    gap: 6px;
+    justify-self: end;
+    gap: 5px;
   }
 
   .header-actions .header-cta {
-    width: 100%;
+    width: auto;
+    min-width: 58px;
   }
 
   .hero {
     min-height: 88vh;
-    padding: 132px 16px 18px;
+    padding: 104px 16px 18px;
   }
 
   .hero-content {
@@ -1019,6 +1047,20 @@ h1 {
   .reason-grid,
   .sns-actions {
     grid-template-columns: 1fr;
+  }
+
+  .reason-grid article {
+    min-height: 0;
+  }
+
+  .access-media {
+    gap: 10px;
+  }
+
+  .access-photo img,
+  .map-placeholder iframe {
+    min-height: 240px;
+    height: 240px;
   }
 
   .voice-slider {

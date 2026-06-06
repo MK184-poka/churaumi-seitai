@@ -18,6 +18,7 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
@@ -30,6 +31,10 @@ body {
   font-family: "Yu Gothic", "Meiryo", system-ui, sans-serif;
   line-height: 1.75;
   letter-spacing: 0;
+}
+
+main {
+  overflow-x: hidden;
 }
 
 a {
@@ -884,10 +889,7 @@ h1 {
 
 @media (max-width: 620px) {
   .site-header {
-    position: fixed !important;
-    top: 0;
-    left: 0;
-    right: 0;
+    position: absolute;
     grid-template-columns: 1fr;
     gap: 8px;
     overflow: hidden;
@@ -932,7 +934,10 @@ h1 {
   }
 
   .hero {
+    width: 100vw;
+    max-width: 100vw;
     min-height: 88vh;
+    margin: 0;
     padding: 124px 16px 18px;
   }
 
@@ -992,6 +997,8 @@ h1 {
   }
 
   .visual-strip {
+    width: 100vw;
+    max-width: 100vw;
     padding: 8px;
   }
 

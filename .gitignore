@@ -1,3 +1,4 @@
 *.md
 local-*-check.png
+local-*.png
 vercel-*-check.png

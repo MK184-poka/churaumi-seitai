@@ -49,8 +49,8 @@ img {
   right: 0;
   z-index: 30;
   display: grid;
-  grid-template-columns: auto 1fr auto;
-  gap: 22px;
+  grid-template-columns: minmax(120px, auto) 1fr auto;
+  gap: 18px;
   align-items: center;
   padding: 14px clamp(16px, 4vw, 54px);
   color: #fff;
@@ -60,18 +60,7 @@ img {
 .brand {
   display: inline-flex;
   align-items: center;
-  gap: 12px;
-}
-
-.brand-mark {
-  display: grid;
-  place-items: center;
-  width: 42px;
-  height: 42px;
-  background: rgba(255, 255, 255, 0.18);
-  border: 1px solid rgba(255, 255, 255, 0.35);
-  border-radius: 50%;
-  font-weight: 900;
+  min-width: 0;
 }
 
 .brand strong,
@@ -122,6 +111,7 @@ img {
   display: flex;
   align-items: center;
   gap: 8px;
+  min-width: 0;
 }
 
 .header-cta,
@@ -861,7 +851,7 @@ h1 {
 @media (max-width: 620px) {
   .site-header {
     grid-template-columns: 1fr;
-    gap: 10px;
+    gap: 8px;
     padding: 12px 14px;
     background: linear-gradient(180deg, rgba(9, 31, 29, 0.88), rgba(9, 31, 29, 0.38));
   }
@@ -871,26 +861,33 @@ h1 {
   }
 
   .brand strong {
-    font-size: 15px;
+    font-size: 14px;
   }
 
   .brand small {
     display: block;
+    font-size: 11px;
   }
 
   .header-cta {
-    min-height: 38px;
-    padding: 9px 12px;
-    font-size: 13px;
+    min-height: 34px;
+    padding: 8px 10px;
+    font-size: 12px;
+    white-space: nowrap;
+    min-width: 0;
   }
 
   .header-actions {
-    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    width: auto;
+    max-width: calc(100vw - 48px);
+    justify-self: center;
     gap: 6px;
   }
 
   .header-actions .header-cta {
-    flex: 1;
+    width: 100%;
   }
 
   .hero {

@@ -894,42 +894,47 @@ h1 {
   }
 
   .hero {
-    min-height: 92vh;
+    min-height: 88vh;
     padding: 132px 16px 18px;
   }
 
   .hero-content {
-    padding-bottom: 126px;
+    padding-bottom: 92px;
   }
 
   h1 {
-    font-size: clamp(28px, 8.4vw, 34px);
-    line-height: 1.2;
+    font-size: clamp(27px, 7.5vw, 31px);
+    line-height: 1.18;
+    white-space: nowrap;
   }
 
   .hero-lead {
-    font-size: 16px;
+    font-size: 14px;
     line-height: 1.75;
   }
 
   .hero-actions {
     align-items: stretch;
     gap: 8px;
-    margin-top: 22px;
+    margin-top: 18px;
   }
 
   .hero-actions .button {
     width: 100%;
   }
 
+  .hero-actions .button.glass {
+    display: none;
+  }
+
   .hero-info {
     grid-template-columns: repeat(3, minmax(0, 1fr));
-    bottom: 18px;
+    bottom: 14px;
     border-radius: 8px;
   }
 
   .hero-info div {
-    padding: 9px 8px;
+    padding: 7px 6px;
     border-right: 1px solid var(--line);
     border-bottom: 0;
   }
@@ -939,11 +944,12 @@ h1 {
   }
 
   .hero-info span {
-    font-size: 10px;
+    font-size: 9px;
   }
 
   .hero-info strong {
-    font-size: 13px;
+    margin-top: 2px;
+    font-size: 12px;
     line-height: 1.35;
   }
 
@@ -1007,8 +1013,10 @@ h1 {
   .access-copy h2,
   .sns-section h2,
   .contact-section h2 {
-    font-size: 30px;
-    line-height: 1.28;
+    font-size: 27px;
+    line-height: 1.35;
+    word-break: keep-all;
+    overflow-wrap: break-word;
   }
 
   .reason-grid,

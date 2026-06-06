@@ -450,6 +450,19 @@ h1 {
   max-width: 42em;
 }
 
+.contact-heading {
+  display: inline-grid;
+  gap: 0.04em;
+}
+
+.contact-heading span {
+  display: block;
+}
+
+.contact-heading span + span {
+  margin-left: clamp(22px, 4vw, 54px);
+}
+
 .point-list {
   display: grid;
   gap: 10px;
@@ -840,6 +853,7 @@ h1 {
 
 .site-footer {
   display: flex;
+  align-items: center;
   justify-content: space-between;
   gap: 16px;
   padding: 22px clamp(18px, 5vw, 78px);
@@ -850,6 +864,30 @@ h1 {
 
 .site-footer span {
   color: rgba(255, 255, 255, 0.65);
+}
+
+.footer-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 12px 16px;
+}
+
+.footer-phone {
+  display: grid;
+  gap: 1px;
+  line-height: 1.35;
+  text-align: left;
+}
+
+.footer-phone span {
+  font-size: 12px;
+}
+
+.footer-phone strong {
+  color: #fff;
+  font-size: 14px;
 }
 
 @keyframes fadeSlide {
@@ -1255,8 +1293,32 @@ h1 {
     display: block;
   }
 
+  .contact-heading span + span {
+    margin-left: clamp(24px, 12vw, 46px);
+  }
+
   .site-footer span {
     display: block;
     margin-top: 6px;
+  }
+
+  .footer-meta {
+    display: grid;
+    justify-content: start;
+    gap: 10px;
+  }
+
+  .footer-links {
+    line-height: 1.6;
+  }
+
+  .footer-phone {
+    margin-top: 0;
+    gap: 2px;
+  }
+
+  .footer-phone span,
+  .footer-phone strong {
+    margin-top: 0;
   }
 }

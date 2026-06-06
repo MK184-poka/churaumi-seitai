@@ -48,6 +48,10 @@ img {
   height: auto;
 }
 
+.mobile-break {
+  display: none;
+}
+
 .site-header {
   position: fixed;
   top: 0;
@@ -965,6 +969,7 @@ h1 {
   .hero-lead {
     font-size: 14px;
     line-height: 1.75;
+    text-wrap: pretty;
   }
 
   .hero-actions {
@@ -1045,6 +1050,7 @@ h1 {
   .visual-strip figcaption p {
     font-size: 14px;
     line-height: 1.8;
+    text-wrap: pretty;
   }
 
   .story-section,
@@ -1129,6 +1135,11 @@ h1 {
     word-break: normal;
     overflow-wrap: normal;
     line-break: strict;
+    text-wrap: pretty;
+  }
+
+  .mobile-break {
+    display: block;
   }
 
   .reason-grid,

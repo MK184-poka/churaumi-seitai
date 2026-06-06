@@ -52,6 +52,10 @@ img {
   display: none;
 }
 
+.keep-line {
+  white-space: nowrap;
+}
+
 .site-header {
   position: fixed;
   top: 0;

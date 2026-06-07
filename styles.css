@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@700;800;900&display=swap");
+
 :root {
   --ink: #102a3a;
   --muted: #5d7280;
@@ -10,6 +12,7 @@
   --sun: #f4c36d;
   --sea: #0d88b8;
   --shadow: 0 24px 70px rgba(9, 78, 110, 0.16);
+  --heading-font: "M PLUS Rounded 1c", "Zen Maru Gothic", "Hiragino Maru Gothic ProN", "Yu Gothic", "Meiryo", system-ui, sans-serif;
 }
 
 * {
@@ -240,11 +243,25 @@ p {
 
 h1 {
   margin: 0;
+  font-family: var(--heading-font);
   font-size: clamp(40px, 6.4vw, 74px);
   line-height: 1.12;
   letter-spacing: 0;
   word-break: keep-all;
   overflow-wrap: normal;
+}
+
+h2,
+h3,
+.brand strong,
+.reason-grid strong,
+.menu-detail-grid h3 {
+  font-family: var(--heading-font);
+}
+
+.text-accent {
+  color: var(--sea);
+  font-weight: 900;
 }
 
 .hero-lead {
@@ -607,6 +624,17 @@ h1 {
   margin: 0;
   color: var(--muted);
   line-height: 1.9;
+}
+
+.detail-price {
+  display: inline-block;
+  margin-top: 12px;
+  padding: 7px 12px;
+  color: #fff;
+  background: var(--deep);
+  border-radius: 8px;
+  font-size: 13px;
+  line-height: 1.6;
 }
 
 .reason-section {

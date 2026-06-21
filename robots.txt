@@ -1,2 +1,4 @@
 User-agent: *
 Allow: /
+
+Sitemap: https://churaumi-seitai-kimm.vercel.app/sitemap.xml
